@@ -2,6 +2,7 @@ package com.example.android.reportcard;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,7 +45,16 @@ public class MainActivity extends AppCompatActivity{
         TextView majorView = (TextView) findViewById(R.id.major);
         final String major = "Porpoise Theft Management";
         majorView.setText(major);
+
+
+        Log.v("MainActivity", "Grades before change: " + grade);
+
+        grade.get(4).setArtGrade("B");
+
+        Log.v("MainActivity", "Grades after change: " + grade);
     }
+
+
 
 
 }
